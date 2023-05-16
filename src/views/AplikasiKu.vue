@@ -17,8 +17,8 @@
           <textarea id="deskripsi" rows="4" class="block mx-auto p-2.5 w-full md:w-1/3 text-sm text-gray-900 bg-cyan-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" v-model="kegiatan.deskripsi"></textarea>
         </div>
         <button class="mx-5 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Tambahkan</button>
-        <button class="mx-5 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" @click="resetInput">Reset</button>
-        <button class="mx-5 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" @click="batalTambah" v-if="kegiatan.nama || kegiatan.deskripsi">Batal</button>
+        <button class="mx-5 mt-5 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" @click="resetInput">Reset</button>
+        <button class="mx-5 mt-5 text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" @click="batalTambah" v-if="kegiatan.nama || kegiatan.deskripsi">Batal</button>
       </form>
       <div class="py-5">
         <label class="px-2 text-base mb-3 text-cyan-600 font-medium" for="filter">Tampilkan Kegiatan Belum Selesai</label>
