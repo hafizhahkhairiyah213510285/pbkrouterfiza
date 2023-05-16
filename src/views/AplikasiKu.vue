@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <h1 class="text-4xl pb-6 font-semibold text-center text-cyan-600 ">List Kegiatan</h1>
-    <div class="py-5 mb-10 bg-cyan-100 border rounded-lg mx-20 border-none text-center shadow-md">
+    <div class="py-5 mb-10 bg-cyan-100 border rounded-lg mx-4 lg:mx-20 border-none text-center shadow-md">
       <h1 class="py-2 text-cyan-600 font-medium text-lg">Inputkan Kegiatan</h1>
       <form class="" @submit.prevent="tambahKegiatan">
         <div class="mb-6">
@@ -38,7 +38,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -86,13 +85,13 @@ export default {
     toggleDone(index) {
       this.kegiatanList[index].done = !this.kegiatanList[index].done
     },
+    computed: {
     filterKegiatan() {
-      if (this.filterDone) {
-        this.kegiatanList = this.kegiatanList.filter(kegiatan => !kegiatan.done)
-      } else {
-        this.kegiatanList = JSON.parse(localStorage.getItem('kegiatanList')) || []
-      }
+      return this.filterDone
+        ? this.kegiatanList.filter((kegiatan) => !kegiatan.done)
+        : this.kegiatanList
     }
+  },
   },
   created() {
     this.kegiatanList = JSON.parse(localStorage.getItem('kegiatanList')) || []
